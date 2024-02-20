@@ -18,10 +18,7 @@ const useStyles = makeStyles(() => ({
 
 const Copyright: React.FC = () => (
   <Typography variant='body2' color='textSecondary'>
-    {'Copyright © '}
-    <Link color='inherit' href='https://eclipsesource.com' target='_blank'>
-      EclipseSource
-    </Link>
+    {'Schema Editor V 0.0.1 '}
     {' ' + new Date().getFullYear()}
   </Typography>
 );
