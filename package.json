@@ -2,8 +2,9 @@
   "name": "root",
   "scripts": {
     "lerna": "lerna",
+    "initialStart": "npm ci && npm run init && npm run build && npm run start",
     "init": "lerna bootstrap --hoist",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider lerna run build",
+    "build": "lerna run build",
     "test": "lerna run test",
     "lint": "lerna run lint",
     "start": "cd app && npm run start",
