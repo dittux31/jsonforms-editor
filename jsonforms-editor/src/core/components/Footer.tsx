@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
   return (
     <Container className={classes.container}>
       <Typography variant='body2' color='textSecondary'>
-        {`Editor Version 0.0.1 © ${new Date().getFullYear()}`}
+        {`Copyright © ${new Date().getFullYear()}`}
       </Typography>
     </Container>
   );

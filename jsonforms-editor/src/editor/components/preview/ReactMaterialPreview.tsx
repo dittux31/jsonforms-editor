@@ -15,7 +15,7 @@ import React, { useMemo } from 'react';
 
 import { useSchema } from '../../../core/context';
 import { generateEmptyData } from '../../../core/model';
-import { useExportSchema, useExportUiSchema } from '../../../core/util';
+import { useExportSchema, useExportUiSchema } from '../../../core/util/hooks';
 import { previewOptions } from './options';
 
 export const ReactMaterialPreview: React.FC = () => {

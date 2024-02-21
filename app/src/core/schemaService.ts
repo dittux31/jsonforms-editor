@@ -8,52 +8,58 @@
 import { SchemaService } from '@jsonforms/editor';
 
 const exampleSchema = {
-  $schema: 'http://json-schema.org/draft-07/schema#',
-  $id: 'https://delta.com/configuration/dynamodb.source.schema.jsonc',
   type: 'object',
+  title: 'Person',
   properties: {
-    tableName: { type: 'string' },
-    operationType: {
+    name: {
       type: 'string',
-      enum: ['query', 'scan'],
+      minLength: 3,
     },
-    query: {
+    birthDate: {
+      type: 'string',
+      format: 'date',
+    },
+    personalData: {
       type: 'object',
       properties: {
-        keyConditionExpression: { type: 'string' },
-        expressionAttributeNames: { type: 'string' },
-        expressionAttributeValues: { type: 'string' },
+        age: {
+          type: 'integer',
+          description: 'Please enter your age.',
+        },
+        height: {
+          type: 'number',
+        },
+        drivingSkill: {
+          type: 'number',
+          maximum: 10,
+          minimum: 1,
+          default: 7,
+        },
       },
-      required: [
-        'keyConditionExpression',
-        'expressionAttributeNames',
-        'expressionAttributeValues',
-      ],
+      required: ['age', 'height'],
     },
-    scan: {
-      type: 'object',
-      properties: {
-        filterExpression: { type: 'string' },
-        expressionAttributeNames: { type: 'string' },
-        expressionAttributeValues: { type: 'string' },
+    friends: {
+      type: 'array',
+      items: {
+        type: 'object',
+        title: 'Friend',
+        properties: {
+          name: {
+            type: 'string',
+          },
+          isClose: {
+            type: 'boolean',
+          },
+        },
       },
-      required: [
-        'filterExpression',
-        'expressionAttributeNames',
-        'expressionAttributeValues',
-      ],
     },
-  },
-  required: ['tableName', 'operationType'],
-  if: {
-    properties: { operationType: { const: 'scan' } },
-  },
-  then: { required: ['scan'] },
-  else: {
-    if: {
-      properties: { operationType: { const: 'query' } },
+    nationality: {
+      type: 'string',
+      enum: ['DE', 'IT', 'JP', 'US', 'RU', 'Other'],
     },
-    then: { required: ['query'] },
+    occupation: {
+      type: 'string',
+    },
   },
 };
 

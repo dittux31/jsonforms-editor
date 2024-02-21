@@ -4,4 +4,3 @@ node_modules/
 yalc.lock
 build/
 .eslintcache
-.idea

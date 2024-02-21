@@ -1,8 +1,7 @@
- {
+{
   "name": "jsonforms-editor",
   "version": "0.1.0",
   "private": true,
-   "homepage": "./",
   "dependencies": {
     "@jsonforms/editor": "^0.1.0",
     "@material-ui/core": "^4.9.14",
@@ -24,7 +23,6 @@
   },
   "scripts": {
     "start": "rescripts start",
-    "start::v18": "rescripts --openssl-legacy-provider start",
     "build": "rescripts build",
     "test": "rescripts test --watchAll=false",
     "eject": "react-scripts eject",

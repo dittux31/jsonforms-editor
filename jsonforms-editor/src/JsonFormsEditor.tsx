@@ -15,23 +15,26 @@ import { DndProvider } from 'react-dnd';
 import Backend from 'react-dnd-html5-backend';
 import { ReflexContainer, ReflexElement, ReflexSplitter } from 'react-reflex';
 
-import { DefaultPaletteService, PaletteService } from './core/api';
-import { EmptySchemaService, SchemaService } from './core/api';
 import {
   CategorizationService,
   CategorizationServiceImpl,
 } from './core/api/categorizationService';
+import {
+  DefaultPaletteService,
+  PaletteService,
+} from './core/api/paletteService';
+import { EmptySchemaService, SchemaService } from './core/api/schemaService';
 import { Footer, Header, Layout } from './core/components';
 import { EditorContextInstance } from './core/context';
 import { Actions, editorReducer } from './core/model';
 import { SelectedElement } from './core/selection';
-import { tryFindByUUID } from './core/util';
+import { tryFindByUUID } from './core/util/schemasUtil';
 import {
   defaultEditorRenderers,
   defaultEditorTabs,
   EditorPanel,
 } from './editor';
-import { EditorTab } from './editor';
+import { EditorTab } from './editor/components/EditorPanel';
 import {
   defaultPalettePanelTabs,
   PalettePanel,

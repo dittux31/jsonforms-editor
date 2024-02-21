@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
           noWrap
           className={classes.title}
         >
-          Schema Editor
+          JSON Forms Editor
         </Typography>
         <IconButton
           aria-label={`Download`}
