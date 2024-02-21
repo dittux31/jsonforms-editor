@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "rescripts start",
-    "build": "rescripts build",
+    "start::v18": "rescripts --openssl-legacy-provider start",
+    "build": "rescripts --openssl-legacy-provider build",
     "test": "rescripts test --watchAll=false",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",

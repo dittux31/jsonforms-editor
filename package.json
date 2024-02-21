@@ -6,6 +6,8 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "lint": "lerna run lint",
+    "initialStart": "npm ci && npm run init && npm run build && npm run start::v18",
+    "start::v18": "cd app && npm run start::v18",
     "start": "cd app && npm run start",
     "watch": "cd jsonforms-editor && npm run watch",
     "cypress:open": "cd app && npm run cypress:open",
