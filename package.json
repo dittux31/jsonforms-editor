@@ -2,7 +2,7 @@
   "name": "root",
   "scripts": {
     "lerna": "lerna",
-    "initialStart": "npm ci && npm run init && npm run build && npm run start",
+    "initialStart": "npm ci && npm run init && npm run build && npm run start::v18",
     "init": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "test": "lerna run test",
