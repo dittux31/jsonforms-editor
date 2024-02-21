@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "rescripts start",
+    "start::v18": "rescripts --openssl-legacy-provider start",
     "build": "rescripts build",
     "test": "rescripts test --watchAll=false",
     "eject": "react-scripts eject",

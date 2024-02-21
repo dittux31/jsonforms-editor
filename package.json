@@ -3,10 +3,11 @@
   "scripts": {
     "lerna": "lerna",
     "init": "lerna bootstrap --hoist",
-    "build": "lerna run build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider lerna run build",
     "test": "lerna run test",
     "lint": "lerna run lint",
     "start": "cd app && npm run start",
+    "start::v18": "cd app && npm run start::v18",
     "watch": "cd jsonforms-editor && npm run watch",
     "cypress:open": "cd app && npm run cypress:open",
     "cypress:ci": "cd app && npm run cypress:ci"
